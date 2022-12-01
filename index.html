@@ -1,138 +1,377 @@
-<!DOCTYPE HTML>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Rho Space - Desarrollador Web</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="logo,ilustracion,pagina,web">
-    <meta name="description" content="Ofrezco mis servicios de programación y diseño web.">
+    <title>Rho Space</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="desarrollador,developer,app,web page">
+    <meta name="description" content="Servicios de desarrollo de aplicaciones y sitios web.">
     <meta name="author" content="Rodrigo Rivera">
-    <link rel="icon" href="img/icon/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script defer src="js/main.js"></script>
+    <link rel="icon" href="assets/img/rhologoico.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+        integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <div id="page">
-        <!-- Header-->
-        <header class="header">
-            <nav class="nav m-auto">
-                <img src="img/rhologo.png" class="logo" alt="logo Rho Space">
-                <button class="toggle"> <i class="fa-solid fa-bars"></i></button>
-                <ul class="menu-item" id="menu">
-                    <li><a href="#web">Páginas Web</a></li>
-                    <li><a href="#logos">Logos</a></li>
-                    <li><a href="#ilustracion">Ilustraciones</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- article-->
-        <article>
-            <!-- perfil-->
-            <section class="perfil" id="conocimientos">
-                <div class="cero m-auto py-8">
-                    <div class="presentacion">
-                        <div class="titulo py-3">
-                            <h3 class="normal">SOY</h3>
-                            <h3>RODRIGO RIVERA</h3>
-                        </div>
-                        <div class="aboutMe">
-                            <p> Artista digital con estudios de diseño gráfico y programación web, mi enfoque es apoyar
-                                el
-                                <b>emprendimiento</b>. Si confías en mi tendrás mi arte y conocimientos a tu
-                                disposición.
-                            </p>
-                            <p>
-                                Me considero una persona honesta, respetuosa y creativa. Rho es mi apodo de toda la vida
-                                el
-                                cual adopté para dar a conocer mi arte.
-                            </p>
-                            <p>
-                                Entre mis habilidades estan el desarrollo de <b>logos</b>, <b>ilustración</b> y
-                                maquetación
-                                de <b>páginas web</b>. Te invito a que veas mi trabajo a continuación.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="avatar">
-                        <img src="img/avatar.jpg" alt="Foto Rodrigo">
+
+    <!--header-->
+    <header class="nav">
+        <nav class="flexBetween">
+            <img src="./assets/img/rhologo.png" class="nav__logo" alt="logo Rho Space">
+            <btn class="nav__toggle" id="toggle"><i class="fas fa-bars"></i></btn>
+            <ul class="nav__list" id="list">
+                <li><a href="#project" class="nav__list--btn">Proyectos</a></li>
+                <li><a href="#skills" class="nav__list--btn">Conocimientos</a></li>
+                <li><a href="#footer" class="nav__list--contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--main-->
+    <section class="main">
+        <div class="presentation">
+            <img class="presentation__avatar" src="assets/img/avatar.jpg" alt="foto perfil Rodrigo Rivera">
+            <p class="presentation__text mt-1">Mi nombre es Rodrigo Rivera<br>
+                de profesión <strong>Full-Stack Developer</strong><br>
+                con estudios de Diseño Gráfico.</p>
+        </div>
+    </section>
+
+    <!--project-->
+    <section class="projects py-2" id="project">
+        <h2 class="projects__title pt-3">Proyectos</h2>
+
+        <article class="project pt-2 gridTwo">
+            <div class="project__box pj1">
+                <img src="./assets/img/projects/huellaslogo.png" alt="logo huellasApp" class="project__box--logo"
+                    loading="lazy" />
+                <div class=" flexColumn pt-1">
+                    <p class="project__box--text">HuellasApp es una <strong class="project__box--strong">aplicación
+                            móvil </strong>centrada en
+                        generar una comunidad de usuarios
+                        que compartan contenido sobre animales extraviados para facilitar la busqueda de mascotas
+                        perdidas.
+                    </p>
+                    <p class="project__box--text pt-1">Proyecto en conjunto con David Rivas, se utilizo el lenguaje
+                        <strong class="project__box--strong">Java</strong>,
+                        <strong class="project__box--strong">Firebase</strong>
+                        y una base de datos <strong class="project__box--strong">NoSQL</strong> para su construcción.
+                    </p>
+                    <a href="https://github.com/davidark31/MiHuellasApp" class="project__box--btnCode mt-1">Código</a>
+                </div>
+            </div>
+
+            <div class="project__box pj2">
+                <img src="./assets/img/projects/tintalizulogo.png" alt="logo tintalizu" class="project__box--logo"
+                    loading="lazy" />
+                <div class=" flexColumn pt-1">
+                    <p class="project__box--text"><strong class="project__box--strong">Página Web</strong> para
+                        presentar productos del
+                        emprendimiento artístico tintalizú
+                        creado por Liced Vargas.
+                    </p>
+                    <p class="project__box--text pt-1">En la construcción se uso el preprocesador de css
+                        <strong class="project__box--strong">Sass</strong> junto al lenguaje
+                        <strong class="project__box--strong">Javascript</strong>. Tiene un enfoque <strong
+                            class="project__box--strong">responsive</strong> para ser accesible
+                        desde móviles.
+                    </p>
+                    <div class="flex mt-1">
+                        <a href="https://tintalizu.github.io/" class="project__box--btn">Ver Tintalizú</a>
+                        <a href="https://github.com/davidark31/MiHuellasApp" class="project__box--btnCode">Código</a>
                     </div>
                 </div>
-            </section>
-            <!-- página web -->
-            <section class="landpages" id="web">
-                <div class="one m-auto py-8">
-                    <div class="titulos">
-                        <h2>PÁGINAS WEB</h2>
-                    </div>
-                    <div class="page">
-                        <img data-aos="zoom-in" data-aos-duration="1500" src="img/page.jpg" alt="maqueta pagina">
-                        <div class="phone">
-                            <img data-aos="zoom-in" data-aos-duration="1500" src="img/phone.jpg" alt="vista en telefono">
-                            <img data-aos="zoom-in" data-aos-duration="1500" src="img/phone2.jpg" alt="vista en telefono">
-                            <img data-aos="zoom-in" data-aos-duration="1500" src="img/phone3.jpg" alt="vista en telefono">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- logos -->
-            <section class="design" id="logos">
-                <div class="one m-auto py-8">
-                    <div class="titulos">
-                        <h2>LOGOS</h2>
-                    </div>
-                    <div class="logos">
-                        <img src="img/vegan.jpg" alt="vegan bike food">
-                        <img src="img/elsa.jpg" alt="elsa calzado">
-                        <img src="img/alexis.jpg" alt="alexis mathieu">
-                        <img src="img/huellas.jpg" alt="huellas aplicacion">
+            </div>
+
+            <div class="project__box pj3">
+                <img src="./assets/img/projects/vacunateapplogo.png" alt="logo huellasApp" class="project__box--logo"
+                    loading="lazy" />
+                <div class=" flexColumn pt-1">
+                    <p class="project__box--text">VacunateApp es un proyecto desarrollado en <strong class="project__box--strong">Angular</strong>
+                        el cual esta conectado a <strong class="project__box--strong">Microservicios</strong>
+                        desarrollados en <strong class="project__box--strong">Spring Boot</strong>. Su principal función es el manejo 
+                        del stock de vacunas y pacientes vacunados, esto por usuarios previamente logeados en el sistema.
+                    </p>
+                    <p class="project__box--text pt-1">Proyecto en conjunto con Devora Rohten, Sebastian Espinoza, Barbara Vera y Diego Maturana.
+                    </p>
+                    <div class="flex mt-1">
+                        <a href="https://www.figma.com/file/7xROGO6adiSmCoGzEH7ryn/VacunaApp?node-id=4%3A3&t=lw3fTAkgjMaaxd22-1" class="project__box--btn">Ver Presentación</a>
+                        <a href="https://github.com/RhoSpace/proyectoFinalVacunateApp" class="project__box--btnCode">Código</a>
                     </div>
                 </div>
-            </section>
-            <!-- Ilustracion -->
-            <section class="digitalArt" id="ilustracion">
-                <div class="one m-auto py-8">
-                    <div class="titulos">
-                        <h2>ILUSTRACIONES</h2>
-                    </div>
-                    <img data-aos="fade-up" data-aos-duration="1500" src="img/1.jpg" alt="Abrazo">
-                    <div class="ilustraciones">
-                        <img data-aos="fade-up" data-aos-duration="1500" src="img/3.jpg" alt="Fuerza">
-                        <img data-aos="fade-up" data-aos-duration="1500" src="img/2.jpg" alt="Cuidado">
+            </div>
+
+            <div class="project__box pj4">
+                <img src="./assets/img/projects/efralogo.png" alt="logo tintalizu" class="project__box--logo"
+                    loading="lazy" />
+                <div class=" flexColumn pt-1">
+                    <p class="project__box--text"><strong class="project__box--strong">Página Web</strong> para
+                        mostrar las propiedades en venta de efrarivera, inmobiliaria local.
+                    </p>
+                    <p class="project__box--text pt-1">La construcción se realizo con
+                        <strong class="project__box--strong">Sass</strong> y <strong class="project__box--strong">Javascript</strong>,
+                        además de ser <strong class="project__box--strong">responsive</strong>. Anecdóticamente en este proyecto
+                        logre ligar el dominio a un repositorio de github page para abaratar costos.
+                    </p>
+                    <div class="flex mt-1">
+                        <a href="https://www.efrarivera.com/" class="project__box--btn">Ver Página</a>
+                        <a href="https://github.com/RhoSpace/EfraPage" class="project__box--btnCode">Código</a>
                     </div>
                 </div>
-            </section>
+            </div>
         </article>
-        <!-- Footer -->
-        <footer id="contacto">
-            <section class="m-auto">
-                <div class="icons">
-                    <a href="https://github.com/RhoSpace"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rodrigo-antonio-rivera-beltr%C3%A1n-b3b30922b/"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/rhospace/"><i class="fa-brands fa-instagram"></i></a>
-                    <a id="copyEmail"><i class="fa-solid fa-envelope"></i></a>
+
+    </section>
+
+    <!--skills-->
+    <section class="skills" id="skills">
+        <article class="skills__article flexColumn">
+            <h2 class="skills__article--title pt-3">Conocimientos</h2>
+            <p class="skills__article--text">Desarrollo Frontend</p>
+            <hr class="skills__article--hr my-1">
+            <div class="skills__article--content py-1">
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/html.png" alt="">
+                    <p class="boxQuality__text">HTML5 / CC3</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
                 </div>
-                <div class="textfooter">
-                    <p>Portafolio Rodrigo Rivera 2022.</p>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/sass.png" alt="">
+                    <p class="boxQuality__text">Sass / bootstrap</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
                 </div>
-            </section>
-            <hr>
-        </footer>
-    </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/javascript.png" alt="">
+                    <p class="boxQuality__text">JavaScript</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/react.png" alt="">
+                    <p class="boxQuality__text">REACT</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/angular.png" alt="">
+                    <p class="boxQuality__text">Angular/ Typescript</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/php.png" alt="">
+                    <p class="boxQuality__text">PHP</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="skills__article--text">Desarrollo Backend</p>
+            <hr class="skills__article--hr my-1">
+            <div class="skills__article--content py-1">
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/java.png" alt="">
+                    <p class="boxQuality__text">JAVA</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/spring.png" alt="">
+                    <p class="boxQuality__text">Spring Boot</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/js.png" alt="">
+                    <p class="boxQuality__text">Node.js</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="skills__article--text">Base de datos y otros</p>
+            <hr class="skills__article--hr my-1">
+            <div class="skills__article--content py-1">
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/postgress.png" alt="">
+                    <p class="boxQuality__text">Postgress/ Mysql</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/mongodb.png" alt="">
+                    <p class="boxQuality__text">MongoDB/ Atlas</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/trello.png" alt="">
+                    <p class="boxQuality__text">Metodología Scrum</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/figma.png" alt="">
+                    <p class="boxQuality__text">Figma</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/androidStudio.png" alt="">
+                    <p class="boxQuality__text">Android Studio/ Firebase</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/github.png" alt="">
+                    <p class="boxQuality__text">Github</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/visualCode.png" alt="">
+                    <p class="boxQuality__text">Visual Studio Code</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/intellij.png" alt="">
+                    <p class="boxQuality__text">IntelliJ/ Eclipse</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+                <div class="boxQuality">
+                    <img loading="lazy" src="assets/img/items/photoshop.png" alt="">
+                    <p class="boxQuality__text">Photoshop</p>
+                    <div>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__star"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                        <i class="fa-solid fa-star boxQuality__starOff"></i>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--contact-->
+    <footer class="footer py-5" id="footer">
+        <section class="footer__section flexColumn">
+            <h3 class="footer__section--title">Rodrigo Antonio Rivera Beltrán</h3>
+            <p class="footer__section--text mt-1">Desarrollador Full-Stack</p>
+        </section>
+        <section class="footer__section mt-1 flexColumn">
+            <p class="footer__section--text">SERVICIOS PERSONALIZADOS</p>
+            <hr class="footer__section--hr mt-1">
+        </section>
+
+        <section class="footer__section flex mt-2">
+            <a href="https://wa.me/56950538254" class="footer__section--info"><i
+                    class="footer__section--icon fa-brands fa-whatsapp"></i>
+                <p class="footer__section--text">+56 9 50538254</p>
+            </a>
+            <a href="mailto:rodrigo.rivera.b@hotmail.com" class="footer__section--info"><i
+                    class="footer__section--icon fa-solid fa-envelope"></i>
+                <p class="footer__section--text">rodrigo.rivera.b@hotmail.com</p>
+            </a>
+        </section>
+
+        <section class="footer__section mt-1 flexColumn">
+            <hr class="footer__section--hr mt-1">
+            <p class="footer__section--text mt-1">©2022 Rodrigo Rivera Portafolio Profesional</p>
+        </section>
+    </footer>
 </body>
 
 </html>

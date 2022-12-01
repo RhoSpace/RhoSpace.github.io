@@ -1,0 +1,34 @@
+//Colors
+$primary-color: #9657d0;
+$secondary-color: #ffd269;
+$terceary-color: #c376ff;
+
+//Icons
+$gold-color:  rgb(219, 173, 21);
+$off-color: rgb(135, 135, 135);
+
+//text
+$font-color: #f5e8cb;
+$title-color: #f0efef;
+
+//Shadows
+$transparent-color: #00061c48;
+$shadow-color: #1b42e4;
+$dark-color: #353c5a;
+$background-color:#07163e;
+$footer-color: #00061c;
+
+$box-shadow:6px 6px #1b42e4;
+
+$limit: 6;
+$unit: 1rem;
+
+$breakpoints:(
+
+    // muypequeña: 320px,
+    // pequeño: 480px,
+    // normal: 768px,
+    grande: 960px,
+    muygrande: 1024px,
+    gigante: 1474px
+)

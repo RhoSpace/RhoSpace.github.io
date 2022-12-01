@@ -1,0 +1,410 @@
+@import "./components/mixins", "./components/vars";
+
+@font-face {
+    font-family: "Alegreya";
+    src: url("../font/AlegreyaSans-Regular.ttf") format("truetype");
+}
+
+/*--------------------------Reset---------------------*/
+
+* {
+    @include reset-pm();
+    box-sizing: border-box;
+    font-family: Alegreya;
+}
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $footer-color;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: none;
+}
+
+strong {
+    color: $secondary-color;
+}
+
+/*--------------------------Utilidades---------------------*/
+
+.gridTwo {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+}
+
+.flexBetween {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*--------------------------Header---------------------*/
+
+.nav {
+    @include container();
+    background-color: $footer-color;
+    padding: 0.8rem 1.5rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0.1rem 15px 10px rgba(3, 2, 33, 0.345);
+    z-index: +1;
+    &__toggle {
+        display: none;
+    }
+    &__logo {
+        width: 4.5rem;
+    }
+    &__list {
+        @include flex();
+        &--btn {
+            transition: background-color 0.3s ease, box-shadow 0.5s ease, color 0.3s ease;
+            @include btn($footer-color, $primary-color);
+            @include border();
+        }
+        &--btn:hover {
+            transition: background-color 0.3s ease, box-shadow 0.5s ease, color 0.3s ease;
+            @include btn($terceary-color, $font-color);
+            @include border();
+            box-shadow: $box-shadow;
+        }
+        &--contact {
+            transition: background-color 0.3s ease, box-shadow 0.5s ease, color 0.3s ease;
+            @include btn($primary-color, $font-color);
+            @include border();
+        }
+        &--contact:hover {
+            transition: background-color 0.3s ease, box-shadow 0.5s ease, color 0.3s ease;
+            @include btn($terceary-color, $font-color);
+            @include border();
+            box-shadow: $box-shadow;
+        }
+    }
+}
+
+/*--------------------------Main---------------------*/
+.main {
+    @include container();
+    background: rgb(16, 36, 95);
+    background: radial-gradient(circle, rgba(16, 36, 95, 1) 0%, rgba(4, 13, 46, 1) 100%);
+    background-position: 50% 38%;
+    background-size: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .presentation {
+        padding: 22vh 0 20vh 0;
+        text-align: center;
+        &__avatar {
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            width: 10rem;
+            object-fit: cover;
+        }
+        &__text {
+            line-height: 1.7em;
+            color: $font-color;
+        }
+    }
+}
+
+/*--------------------------Skill---------------------*/
+
+.skills {
+    @include container();
+    background-color: $title-color;
+    min-height: 100vh;
+    padding: 1.24rem 1.5rem 4rem 1.5rem;
+    &__article {
+        &--title {
+            font-size: 4rem;
+            text-align: center;
+            color: $footer-color;
+        }
+        &--hr {
+            width: 20%;
+            background-color: $terceary-color;
+            height: 5px;
+        }
+        &--text {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            text-align: center;
+            color: $shadow-color;
+            font-weight: bolder;
+        }
+        &--content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    }
+}
+
+.boxQuality {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__text {
+        margin: 0.5rem 0;
+        color: $footer-color;
+    }
+    &__star {
+        color: $gold-color;
+    }
+    &__starOff {
+        color: $off-color;
+    }
+}
+
+/*--------------------------Project---------------------*/
+
+.projects {
+    @include container();
+    background-color: $dark-color;
+    &__title {
+        font-size: 4rem;
+        text-align: center;
+        color: $title-color;
+    }
+}
+
+.project {
+    padding: 1.24rem 1.5rem 4rem 1.5rem;
+    &__box {
+        min-height: 22rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.5rem 2rem;
+        @include border();
+        &--text {
+            color: $font-color;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        &--btn {
+            transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+            @include btn($primary-color, $font-color);
+            @include border();
+            &:hover {
+                transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+                @include btn($secondary-color, $footer-color);
+                @include border();
+            }
+        }
+        &--btnCode {
+            transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+            @include btn($transparent-color, $font-color);
+            @include borderColor($primary-color);
+            &:hover {
+                transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+                @include btn($transparent-color, $secondary-color);
+                @include borderColor($secondary-color);
+            }
+        }
+        &--logo {
+            width: 30%;
+        }
+    }
+}
+
+.pj1 {
+    background-image: url(../img/projects/huellasbg.jpg);
+    background-size: 100%;
+}
+
+.pj2 {
+    background-image: url(../img/projects/tintalizubg.jpg);
+    background-size: 100%;
+}
+
+.pj3 {
+    background-image: url(../img/projects/vacunateappbg.jpg);
+    background-size: 100%;
+}
+
+.pj4 {
+    background-image: url(../img/projects/efrabg.jpg);
+    background-size: 100%;
+}
+
+/*--------------------------footer---------------------*/
+
+.footer {
+    background-color: $footer-color;
+    &__section {
+        @include container();
+        color: $primary-color;
+        &--hr {
+            width: 30%;
+            background-color: $primary-color;
+            height: 5px;
+        }
+        &--info {
+            display: flex;
+            gap: 0.3rem;
+        }
+    }
+}
+
+/*--------------------------ciclos---------------------*/
+
+@for $i from 1 to $limit {
+    .p-#{$i} {
+        padding: $i * $unit;
+    }
+}
+
+@for $i from 1 to $limit {
+    .py-#{$i} {
+        padding: $i * $unit 0;
+    }
+}
+
+@for $i from 1 to $limit {
+    .pt-#{$i} {
+        padding-top: $i * $unit;
+    }
+}
+
+@for $i from 1 to $limit {
+    .m-#{$i} {
+        margin: $i * $unit;
+    }
+}
+
+@for $i from 1 to $limit {
+    .my-#{$i} {
+        margin: $i * $unit 0;
+    }
+}
+
+@for $i from 1 to $limit {
+    .mt-#{$i} {
+        margin-top: $i * $unit;
+    }
+}
+
+@for $i from 1 to $limit {
+    .mb-#{$i} {
+        margin-bottom: $i * $unit;
+    }
+}
+
+/*--------------------------Media Query---------------------*/
+
+@media screen and (max-width: map-get($breakpoints, "gigante")) {
+    .pj1,
+    .pj2,
+    .pj3,
+    .pj4 {
+        background-size: 160%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, "grande")) {
+    .nav {
+        &__toggle {
+            display: block;
+            color: white;
+            font-size: 2rem;
+            background: none;
+            cursor: pointer;
+            transition: color 0.5s ease-in-out;
+            z-index: 2;
+            &:hover {
+                color: $secondary-color;
+                transition: color 0.5s ease-in-out;
+            }
+        }
+
+        &__list {
+            opacity: 0;
+            visibility: hidden;
+            @include flexColumn5g();
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            position: absolute;
+            top: 0%;
+            right: -3%;
+            width: 100vw;
+            min-height: 100vh;
+            background-color: $footer-color;
+            padding: 6rem 0 2rem 0;
+            &--btn,
+            &--contact {
+                font-size: 2rem;
+                @include btn($footer-color, $primary-color);
+                @include border();
+            }
+        }
+    }
+    .action {
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .projects__title,
+    .skills__article--title {
+        font-size: 2.5rem;
+    }
+
+    .pj1,
+    .pj2,
+    .pj3,
+    .pj4 {
+        background-image: none;
+        background-color: $background-color;
+    }
+    .gridTwo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project__box--logo {
+        width: 40%;
+    }
+}

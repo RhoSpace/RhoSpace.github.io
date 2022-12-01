@@ -1,0 +1,51 @@
+@mixin reset-pm {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin border() {
+    border-radius: 5px;
+    border: 3px;
+}
+
+@mixin borderColor($color) {
+    border-radius: 5px;
+    border: $color 3px solid;
+}
+
+@mixin btn($background-color, $color) {
+    background-color: $background-color;
+    color: $color;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    max-width: 8rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+@mixin container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+@mixin flex{ 
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@mixin flexColumn5g{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+
+@mixin title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+@mixin text{
+    font-size: 1.2rem;
+    text-align: center;
+}
