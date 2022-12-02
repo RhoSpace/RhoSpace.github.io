@@ -127,17 +127,16 @@ strong {
     background: radial-gradient(circle, rgba(16, 36, 95, 1) 0%, rgba(4, 13, 46, 1) 100%);
     background-position: 50% 38%;
     background-size: 100%;
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     .presentation {
-        padding: 22vh 0 20vh 0;
         text-align: center;
         &__avatar {
             border-radius: 50%;
             aspect-ratio: 1 / 1;
-            width: 10rem;
+            width: 13rem;
             object-fit: cover;
         }
         &__text {

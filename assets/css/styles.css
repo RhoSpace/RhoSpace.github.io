@@ -150,19 +150,18 @@ strong {
   background: radial-gradient(circle, #10245f 0%, #040d2e 100%);
   background-position: 50% 38%;
   background-size: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .main .presentation {
-  padding: 22vh 0 20vh 0;
   text-align: center;
 }
 .main .presentation__avatar {
   border-radius: 50%;
   aspect-ratio: 1/1;
-  width: 10rem;
+  width: 13rem;
   object-fit: cover;
 }
 .main .presentation__text {
